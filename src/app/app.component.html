@@ -1,0 +1,17 @@
+
+
+  <div class="row">
+    <div class="column left">
+        <input type="number" id="number" name="number" #number (keyup)="updateNumber()"
+            value={{numberElm.nativeElement.value}}><br>
+    </div>
+    <div class="column middle">
+        <select name="choices" id="choices" #choice (change)="displayResult()">
+            <option value="isPrime">isPrime</option>
+            <option value="IsFibanacci">IsFibanacci</option>
+        </select>
+    </div>
+    <div class="column right">
+        <p>{{displayResult()}}</p>
+    </div>
+</div>
